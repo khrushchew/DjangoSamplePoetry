@@ -27,10 +27,3 @@ poetry run python manage.py runserver
 ```
 
 Now your project is ready to go!
-
-### Explanation:
-1. **Headings**: Use `#` for different levels of headings.
-2. **Code**: Code blocks are enclosed in triple backticks (```` ``` ````) with the language specified (`bash`).
-3. **Clarity**: Each step is described concisely and clearly.
-
-This will make your `README.md` look professional and easy to read.
