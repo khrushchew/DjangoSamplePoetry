@@ -13,8 +13,26 @@ services:
     networks:
       - app_network
 
+  app:
+    container_name: django_app
+    build:
+      context: .
+      dockerfile: Dockerfile
+    depends_on:
+      - db
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./sample:/app
+    networks:
+      - app_network
+    environment:
+      DB_NAME: db_docker
+      DB_USER: postgres
+      DB_PASSWORD: 12345678
+      DB_HOST: postgres_db
+      DB_PORT: 5432
 
-      
 volumes:
   postgres_data:
 
