@@ -1,0 +1,23 @@
+services:
+  db:
+    image: postgres:alpine
+    container_name: postgres_db
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: 12345678
+      POSTGRES_DB: db_docker
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    ports:
+      - "5433:5432"
+    networks:
+      - app_network
+
+
+      
+volumes:
+  postgres_data:
+
+networks:
+  app_network:
+    driver: bridge
